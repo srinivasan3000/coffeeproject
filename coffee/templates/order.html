@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+<h1 style="color:red;margin-top:50px;font-size:30px;font-family:Candara;">WELCOME! ORDER SOON</h1>
+<h1 style="font-family:Garamond;font-size:30px;margin-top:50px;width:1200px;color:red;">FOOD CARTS WILL BE DEVELOPED SOON FOR BETTER ACCESS.UNTIL ORDER FOODS FROM THE BELOW LIST:</h1>
+<ol style="font-size:20px;font-family:Garamond;color:red;">
+    <li>CHILLI CHICKEN</li>
+    <li>BUTTER CHICKEN</li>
+    <li>THANDOORI CHICKEN</li>
+    <li>BLACKCURRENT MILKSHAKE</li>
+    <li>KITKAT MILKSHAKE</li>
+    <li>CHICKEN ROAST</li>
+    <li>MUTTON MASTI</li>
+    <li>CAPPUCCINO</li>
+    <li>CHICKEN BIRIYANI</li>
+    <li>MUTTON BIRIYANI</li>
+    <li>PEPSI</li>
+    <li>COCA COLA</li>
+</ol>
+
+<form method="post" style="margin-top:50px;">{% csrf_token %}
+    <h1 style="font-family:Candara">{{ form.as_p}}</h1>
+    <input type="submit" value="ORDER">
+</form>
+
+{% endblock %}

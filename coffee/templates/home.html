@@ -1,0 +1,27 @@
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+</head>
+<body>
+     <h1 class="head"><marquee>COFFEE SHOP</marquee></h1>
+     <img class="image" src="{% static 'images/images.png' %}"/>
+     <div class="navigation">
+            <a href="{% url 'home-func' %}" class="home" >HOME</a>
+            <a href="{% url 'about-func' %}" class="about" >ABOUT</a>
+            <a href="{% url 'review-func' %}" class="review">REVIEWS</a>
+            <a href="{% url 'contact-func' %}" class="contact">CONTACT</a>
+            <a href="{% url 'order-func' %}" class="order">ORDER</a>
+     </div>
+     {% block content %}
+         <img src="https://cdnimg.webstaurantstore.com/images/blogs/2880/coffee-shop_blog-header-1280x500.jpg" class="body-image" width="100%"/>
+
+
+     {% endblock %}
+
+</body>
+</html>
